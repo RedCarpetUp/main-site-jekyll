@@ -1,0 +1,17 @@
+- name: Shopping
+  image: cart.svg
+
+- name: Food
+  image: food.svg
+
+- name: Transport
+  image: transport.svg
+
+- name: Movies
+  image: video-camera.svg
+
+- name: Fun
+  image: circus.svg
+
+- name: Recharge
+  image: smartphone.svg

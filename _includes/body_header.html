@@ -1,0 +1,13 @@
+<div class="bg-grad-header Center-Container">
+    {% if page.alttitle %}
+      <h1 class="text-center text-white" >{{ page.alttitle }}</h1>
+    {% else %}
+      <h1 class="text-center text-white" >{{ page.title }}</h1>
+
+    {% endif %}
+
+    {% if page.subtitle %}
+      <p class="text-center text-white">{{ page.subtitle }}</p>
+    {% endif %}
+</div>
+

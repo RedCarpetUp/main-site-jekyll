@@ -1,0 +1,128 @@
+---
+layout: default
+title: Jobs
+permalink: /jobs/
+menu: main
+footer: nav
+subtitle: <strong>Building credit for India</strong><br/><br/>Today, we use machine learning to build credit scores and enable lending for a billion people. But that's just the beginning.
+---
+
+<section class="jobs-images">
+  <div class="container">
+    <div class="row">
+      {% loop_directory directory:_assets/images/jobs iterator:image filter:*.jpg sort:descending %}
+        <div class="col-sm-4">
+          {% img "jobs/{{ image }}" alt:"job" class:"img-responsive" %}
+        </div>
+      {% endloop_directory %}
+    </div>
+    <div class="row">
+      <div class="col-xs-10">
+        <p class="text-center"><a href="/">At RedCarpet</a> we’re made of brilliant geeks, confident professionals, fearless innovators and boundless foodies. Our team is made up of smart, passionate, and all-around awesome people hailing from a wide variety of backgrounds. We're beginning to grow our company in the heart of New Delhi (and soon all over India)... and trying to establish our culture of innovation across the Indian subcontinent </p>
+		<br/>
+	</div>
+    </div>
+  </div>
+
+</section>
+
+<section class="we-re-looking bg-light-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10">
+		  <p >The founders bring in almost 2 decades of combined experience in building startups, writing code, deep analytics and CXO leadership at top-3 ecommerce players in India and abroad.  Our investors are some of the best in the world.</p>
+		  <p> <a href="/">A typical day at RedCarpet</a> You will come into office  whenever you want, but you will have the maturity to not waste others time by making them wait for you. You will respect work-life balance of your peers.
+		<br/>
+		You will always hire and work with people smarter than yourself.
+		<br/>
+		On the technology front, you’ll be working with our data science stack, our mobile apps as well as our web services. You will be unafraid to rewrite the entire python code because cProfile showed list comprehension is slowing down a batch operation on a machine with 256 mb RAM. You will inspect bytecode to realize that "BUILD_LIST" is being called way too many times.
+		<br/>Or you may be part of our customer facing operations and will bend over backwards to improve the customer service experience or building operational efficiencies in collection and recovery. You will find new ways to help your customers access honest credit lines and help plan their repayments.:w
+
+		<p>We're looking for people who are unafraid to compete with big name universities and fancy titles... and are excited to build something entirely new. We want people who are fearless and hungry.</p>
+		<p> We <b>NEVER</b> hire based on college degrees or where you went to college. For our technology positions, your github or kaggle profile outranks your college degrees. In fact, we have proudly hired and work with people who dont have college degrees. For non-technology positions, you have to be extremely competent in your area of expertise and will need to be extremely hands on. </p>
+
+        <p>We do have a few top pre-reqs in order to be considered as a Comrade:</p>
+
+        <ul>
+          <li>Ownership &amp; Taking initiative</li>
+          <li>Empathy and Making Friends: Passion for food, not drinking to get drunk and an interesting taste in music</li>
+          <li>Courage</li>
+        </ul>
+
+        <p>At RedCarpet, we expect everyone to be collaborative, polite, extremely motivated and smart. We continually push ourselves and each other to be better. Above all, we passionately believe that you should be inspired by and enjoy being around the people you work with.</p>
+
+        <p>Our investors include Twitch.tv founder (and YCombinator superstar) Justin Kan, Y Combinator, Google Launchpad and others.</p>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<section id="perks">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        <h3>RedCarpet Values</h3>
+        <div class="row text-left values">
+          <div class="col-xs-10">
+            <ul class="careers-values list-unstyled text-left">
+              <li><span class="text-ladder-green"><span class="number">1.  </span>Relentless - unto dust we will fight</span></li>
+              <li><span class="text-merit-red"><span class="number">2.  </span>Meritocracy</span></li>
+              <li><span class="text-bozo-blue"><span class="number">3.  </span>No assholes - respect, empathy and trust</span></li>
+              <li><span class="text-merit-red"><span class="number">4.  </span>Everyone is hands on. No exceptions. Period. </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 text-center">
+        <h3>Perks</h3>
+        <div class="row text-left">
+          <div class="col-xs-6">
+            <ul>
+              <li>Competitive salary</li>
+              <li>Early-stage equity</li>
+              <li>Pizza and beer ...</li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6">
+            <ul>
+              <li>Contribution matching</li>
+              <li>Excellent coffee and snacks</li>
+              <li>Open source contributions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="job-listing">
+  <div class="container">
+    <h2>Current Job Openings At RedCarpet</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <ul id="jobs" class="nav nav-pills bg-white-smoke" role="tablist">
+          {% for category in site.data.job_categories %}
+            <li>
+              <h4>{{ category }}</h4>
+            </li>
+            {% for job in site.jobs %}
+              {% if job.category contains category %}
+                <li role="presentation"><a href="#{{ job.slug }}" role="tab" data-toggle="tab">{{ job.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-sm-8">
+        <div class="tab-content">
+          {% for job in site.jobs %}
+            <div role="tabpanel" class="tab-pane" id="{{ job.slug }}">{{ job.content | markdownify }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

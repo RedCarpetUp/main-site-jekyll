@@ -1,0 +1,113 @@
+.slide-control-container {
+  height: 10px;
+  background: #efefef; /* Old browsers */
+  background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efefef), color-stop(100%, #ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #efefef 0%, #ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #efefef 0%, #ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #efefef 0%, #ffffff 100%); /* IE10+ */
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 0 #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  float: left;
+  margin-top: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.slide-control-fill {
+  -webkit-border-radius: 8px 0 0 8px;
+  -moz-border-radius: 8px 0 0 8px;
+  border-radius: 8px 0 0 8px;
+  display: block;
+  height: 100%;
+  border-radius: 7px;
+  box-shadow: inset 0 1px 0 #F9D7C5;
+  overflow: visible !important;
+  position: relative;
+  -webkit-transition: width .1s;
+  -moz-transition: width .1s;
+  -o-transition: width .1s;
+  transition: width .1s;
+  z-index: 1;
+}
+
+.slide-control-handle {
+  background-color: #fbfbfc;
+  background-image: -moz-linear-gradient(top, #fff, #f4f6f8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#f4f6f8));
+  background-image: -webkit-linear-gradient(top, #fff, #f4f6f8);
+  background-image: -o-linear-gradient(top, #fff, #f4f6f8);
+  background-image: linear-gradient(to bottom, #fff, #f4f6f8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff4f6f8', GradientType=0);
+  border: 2px solid #A6ABB3;
+  -webkit-box-shadow: 0 3px 2px 0 rgba(59, 73, 93, .3), inset 0 1px 1px 0 #FFF;
+  -moz-box-shadow: 0 3px 2px 0 rgba(59, 73, 93, .3), inset 0 1px 1px 0 #FFF;
+  box-shadow: 0 3px 2px 0 rgba(59, 73, 93, .3), inset 0 1px 1px 0 #FFF;
+  cursor: pointer;
+  height: 38px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+  position: absolute;
+  right: 0;
+  top: -16px;
+  width: 38px;
+
+  &:after {
+    content: "|||";
+    color: #C7CDD5;
+    font-size: 17px;
+    position: absolute;
+    top: 7px;
+    text-align: center;
+    width: 100%;
+    border: 0;
+    margin-top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    letter-spacing: 1.5px;
+  }
+}
+
+.ie-shadow {
+  zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=0, strength=1),
+          progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=45, strength=1),
+          progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=90, strength=1),
+          progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=135, strength=1),
+          progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=180, strength=1),
+          progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=225, strength=1),
+          progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=270, strength=1),
+          progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=315, strength=1);
+  top: -8px;
+  right: -4px;
+}
+
+.slide-control-input {
+  border: none;
+  color: $color-header-primary;
+  font-size: 21px;
+  max-width: 90px;
+  padding: 3px 5px;
+  pointer-events: none;
+  width: auto;
+}
+
+.slide-control-range {
+  font-size: 13px;
+  position: absolute;
+  top: 20px;
+
+  &.range-min {
+    left: 0;
+  }
+
+  &.range-max {
+    right: 0;
+  }
+}

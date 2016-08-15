@@ -1,0 +1,47 @@
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="footer-product">
+        <!--
+          {% img "logo.png" alt:"{{site.title}}" class:"logo footer-logo col-xs-4" %}
+
+          {% if false %}
+            <ul id="partners" class="list-unstyled list-inline right-side">
+              {% for partner in site.data.partners %}
+                <li class="partner">
+                  {% img "partners/{{ partner.logo }}" alt:"{{ partner.title }}" height:"{{ partner.logo_height }}" %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          -->
+
+          <p>
+            {% img "ycombinator-logo.png" alt:"YCombinator" width:"20" height:"20" %}
+            A YCombinator Summer 2015 Startup
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <ul id="footer-links" class="list-unstyled list-inline">
+          {% for my_page in site.pages %}
+            {% if my_page.footer == 'nav' %}
+              <li>
+                <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          </ul>
+        <ul class="social">
+          <li><a href="https://twitter.com/RedCarpetUp">{% img "icon-twitter.svg" width:"20" height:"20" alt:"Twitter" %}</a></li>
+          <li><a href="https://www.facebook.com/redcarpetup">{% img "icon-facebook.svg" width:"20" height:"20" alt:"Facebook" %}</a></li>
+        </ul>
+        <p class="comapny-name">&copy; RedCarpet Global Inc.</p>
+      </div>
+    </div>
+  </div>
+</footer>

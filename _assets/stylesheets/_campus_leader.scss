@@ -1,0 +1,84 @@
+.campus-leader {
+  .become-a-leader {
+    div {
+      float: none;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      color: $color-header-primary;
+      margin: 0 0 40px;
+
+      @media screen and (max-width: $screen-xs-min), screen and (max-device-width: $screen-xs-min) {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0 0 30px;
+      }
+    }
+    h2 {
+      line-height: 30px;
+      @media screen and (max-width: $screen-xs-min), screen and (max-device-width: $screen-xs-min) {
+        font-size: 22px;
+      }
+      & + p {
+        text-align: center;
+        font-size: 16px;
+        color: #999;
+        margin: 10px 0 0;
+      }
+    }
+  }
+  .icon-banner {
+    padding: 60px 0;
+    img {
+      max-height: 200px;
+    }
+  }
+  span > a {
+    font-size: 1.25em;
+  }
+
+  .why-work {
+    p {
+      color: $color-font-primary;
+      font: 18px/30px 'Open Sans', Helvetica, Arial, sans-serif;
+    }
+    .col-xs-10 {
+      float: none;
+      margin: 0 auto;
+    }
+    h2 {
+      padding-bottom: 40px;
+    }
+  }
+
+  .points {
+    display: inline-block;
+    margin: 30px 0;
+  }
+
+  .grid p {
+    color: white;
+  }
+  .bg-skyblue {
+    background-color: #04bded;
+  }
+  .-pad-triple {
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+  }
+  .-spacing-double > * + * {
+    margin-top: 3em;
+  }
+
+  .handshake {
+    border-radius: 50%;
+    margin: 0 0 40px;
+    max-height: 170px;
+  }
+}
+
+.-img-max-width--400 {
+  max-width: 25em;
+}

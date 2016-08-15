@@ -1,0 +1,45 @@
+# Site settings
+title: RedCarpet
+email: 
+description: 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.redcarpetup.com"
+twitter_username: 
+github_username: 
+
+# Build settings
+markdown: kramdown
+
+page_gen:
+  - data: 'members'
+    template: 'profile'
+    name: 'name'
+    dir: 'people'
+
+
+gems:
+  - jekyll-assets
+    #- jekyll-minifier
+
+assets:
+  compress:
+    css: true
+    js: true
+  cache: .asset-cache
+  cdn: https://cdn.example.com
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: "/assets"
+  assets:
+    - "*.png"
+    - "bundle.css"
+  digest: true
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/fonts
+
+collections:
+  jobs:
+    output: false

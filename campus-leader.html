@@ -1,0 +1,84 @@
+---
+layout: default
+title: Campus Leaders
+permalink: /campus-leaders/
+menu: main
+footer: nav
+alttitle: Grow with Redcarpet
+subtitle: Become a campus leader today!
+---
+
+<div class="campus-leader">
+    <section class="bg-white become-a-leader">
+        <div class="container">
+            <div class="text-center col-xs-10">
+                <p>Do you have great Communication and Networking skills? Are you good at convincing your peers?
+                </p>
+                <p>Do you have strong Leadership Skills and have something to show for it? Have you held or taken
+                    initiatives at leadership positions in your college?</p>
+                <p>Want to be part of the budding Startup culture? Would you like to meet and engage with new
+                    people?</p>
+            </div>
+            <div class="text-center col-xs-10 col-sm-8">
+                {% img "handshake.svg" alt:"handshake" class:"handshake"%}
+            </div>
+            <div class="text-center col-xs-10 col-sm-8">
+                <h2>BECOME A CAMPUS LEADER TODAY!</h2>
+                <p>Interested in working together? Connect with us!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light-grey icon-banner">
+        <div class="container">
+            <div class="row text-center">
+                <div>
+                    {% for point in site.data.points %}
+                    <div class="points col-sm-12 col-md-4">
+                        {% img "points/{{ point.image }}" alt:"{{ point.name }}" %}
+                        <p>{{ point.name }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white why-work">
+        <div class="text-center">
+            <h2>What Do I Have To Do?</h2>
+        </div>
+        <div class="container">
+            <div class="col-xs-10">
+                {% for condition in site.data.whattodo %}
+                <p>&mdash; {{ condition.condition }} </p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light-grey section-intro-lower" id="safe">
+        <div class="container">
+            <div class="row text-center">
+                <h2>Why Work with Redcarpet?</h2>
+
+                {% for benefit in site.data.whywork %}
+                <div class="col-xs-12 col-md-6 security-col">
+                    <div class="security-box">
+                        <div class="header-title">
+                            <h3 class="eta media -media-align-center">
+                                <div class="security-col media__feature">
+                                    {% img "icon-checkbox-circle.svg" width:"24" height:"24" alt:"Checkbox" %}
+                                </div>
+                                <div class="security-header"> {{ benefit.title }} </div>
+                            </h3>
+                        </div>
+                        <div class="text text-left"><p> {{ benefit.text }} </p></div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+</div>

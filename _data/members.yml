@@ -1,0 +1,39 @@
+- name: Abhay Tamaria
+  brief: |
+    Die-hard adventurer and thrill seeker, entrepreneur from heart and believes in making most out of life.
+    Technology evangelist with over 8 years of experience, including general management of small to mid-size
+    organizations, corporate finance, product development, digital marketing, business operations, and strategy.
+    Currently managing the sales and operations at Redcarpet. Previously worked at Pine Labs as product head,
+    servicing a network of over 40K+ merchants and handling a payments volume in excess of $ 700Mn.
+    Prior to Pine Labs, was founder at Adventure Compass now known as The Adventure Kart where he focused on
+    devising strategies to grow the customer base.
+    Usually, he is either climbing the Himalayas or playing golf or knife-painting or dreaming about taking SpaceX
+    flight to outer space.
+    He was born in Rajasthan and graduated with a Bachalor’s degree in computer science and MBA from Indian
+    Institute of Management Bangalore.
+  avatar: abhay.jpg
+
+- name: Kartik Venkataraman
+  brief: |
+    Kartik is a veteran in the travel, ecommerce, digital space, with global experience building and scaling
+    B2C businesses, using analytics, marketing, decision sciences to improve and scale businesses. Prior to
+    founding RedCarpet, Kartik was VP of Marketing & Analytics at Tradus, where he drove triple digit topline
+    growth while significantly improving overall profitability. Kartik held numerous leadership roles at
+    Travelocity and Sabre, where he built products and processes to optimize decision making in multiple areas
+    including pricing, display and merchandizing, marketing and customer care. Kartik holds a Masters from
+    University of Illinois at Urbana-Champaign and a Bachelors from the Indian Institute of Technology, Delhi
+  avatar: kartik.jpg
+
+- name: Sandeep Srinivasa
+  brief: |
+    Sandeep is a startup veteran and, with over 12 years experience in leading Product Design & implementation 
+    of technology solutions and processes. During this period has built teams, product and businesses from 
+    scratch to scale. Prior to founding RedCarpet, Sandeep was VP of Engineering at PropTiger.com, where he 
+    delivered the next generation property search and mapping, CRM system and catalog service. As Director of 
+    Engineering at Tradus.com he built the supply chain backend, search and operations platform. He also founded 
+    Clearsenses, a product development company and his first startup, and built products for Jambool, Harper 
+    Collins and Enfold. Sandeep holds a Masters from USI - Lugano and a Bachelors from IIT-Mumbai
+  avatar: sandeep.jpg
+  twitter: sandgorgon1
+  linkedin: sandeepss
+  github: sandys

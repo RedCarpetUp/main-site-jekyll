@@ -1,0 +1,11 @@
+- title: Your First RedCarpet Loan
+  content: Welcome to the RedCarpet Ladder! Earn 125 points when you begin your first loan.
+  image: approved.svg
+
+- title: Education Courses
+  content: Earn 125 points for completing each of our free education courses.
+  image: education.svg
+
+- title: Repay Your RedCarpet Loan
+  content: 'Repay your loan. On time: 1000 points; extended: 500 points. (Up to 1000 points a month)'
+  image: good_standing.svg

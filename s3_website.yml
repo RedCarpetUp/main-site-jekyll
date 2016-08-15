@@ -1,0 +1,24 @@
+s3_id: <%= ENV['s3_id'] %>
+s3_secret: <%= ENV['s3_secret'] %>
+s3_bucket: x.redcarpetup.com 
+site: _site 
+gzip: false
+#s3_endpoint: ap-southeast-1
+s3_reduced_redundancy: true
+cloudfront_distribution_id: ANX6N6ASZ   
+
+max_age:
+  "assets/*": 63072000
+  "*": 300
+
+cloudfront_wildcard_invalidation: true
+
+cloudfront_distribution_config:
+  default_cache_behavior:
+    min_TTL: <%= 60 * 20 %>
+
+cloudfront_invalidate_root: true
+extensionless_mime_type: text/html
+
+redirects:
+  rss/: atom.xml

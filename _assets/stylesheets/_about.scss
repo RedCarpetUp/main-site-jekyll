@@ -1,0 +1,170 @@
+.about {
+
+  .dedication {
+    .col-xs-10 {
+      float: none;
+      margin: 0 auto;
+      p {
+        font: 16px/32px 'Open Sans', Helvetica, Arial, sans-serif;
+      }
+    }
+    h2 {
+      text-transform: uppercase;
+      margin: 0 0 40px;
+    }
+  }
+
+  .team {
+    border-top: 1px solid #eee;
+
+    h2 {
+      margin: 0 0 40px;
+    }
+
+    .members { text-align: center;
+      @media screen and (max-width: $screen-xs-min), screen and (max-device-width: $screen-xs-min) {
+        text-align: left;
+      }
+    }
+
+    & > .container {
+
+      & > .row {
+        &:first-of-type {
+          margin: 0 !important;
+          border: none !important;
+        }
+        border-top: 1px solid #eee;
+        margin: 70px 0 0 !important;
+        font-size: 0;
+
+        .teammate {
+          line-height: 22px;
+          display: inline-block;
+          width: 33.33%;
+          position: relative;
+          /*padding-top: 14.275%;*/
+          @include bgsize(cover);
+          overflow: hidden;
+
+          @media screen and (max-width: $screen-xs-min), screen and (max-device-width: $screen-xs-min) {
+            width: 50%;
+          }
+
+          &:hover .overlay {
+            opacity: 1;
+            transform: none;
+          }
+
+          .overlay {
+            text-align: center;
+            opacity: 0;
+            @include translate(0, 5px);
+            transition: .25s;
+            position: absolute;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 16px;
+            padding: 10px 10px 20px;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 70%);
+
+            ul { list-style: none; padding: 0; margin: 10px 0 0;
+              li { display: inline-block; margin: 0 10px; }
+            }
+            span {
+              display: block;
+              margin: 0 0 5px;
+              text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+              font: 16px/22px 'Open Sans', Helvetica, Arial, sans-serif;
+              color: #fff;
+              & + a {
+                color: #fff;
+                font-size: 12px;
+                text-decoration: underline;
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+        #partners {
+          padding-bottom: 0;
+          .angels {
+            float: none;
+            display: inline-block;
+            vertical-align: top;
+            margin: 15px 0;
+            text-align: center;
+            width: 180px;
+            @media screen and (max-width: $screen-xs-min), screen and (max-device-width: $screen-xs-min) {
+              width: 115px;
+            }
+          }
+          img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            @media screen and (max-width: $screen-xs-min), screen and (max-device-width: $screen-xs-min) {
+              width: 80px;
+              height: 80px;
+            }
+          }
+          p {
+            strong {
+              font-size: 15px;
+              color: #333;
+              letter-spacing: normal;
+              text-transform: none;
+              @media screen and (max-width: $screen-xs-min), screen and (max-device-width: $screen-xs-min) {
+                font-size: 14px;
+              }
+            }
+            margin-top: 5px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+          }
+          h2 {
+            margin: 0 0 40px;
+          }
+        }
+        #particons {
+          padding-bottom: 0;
+          .partners-logos {
+            float: none;
+            display: inline-block;
+            vertical-align: top;
+            margin: 15px 30px;
+            text-align: center;
+            width: 200px;
+            img {
+              @include bgsize(contain);
+              margin: 0 auto;
+              max-width: 200px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*.span-padded {
+    color: white;
+    margin-top: -30px;
+    padding: 40px;
+
+    &.first {
+      margin-top: -150px;
+    }
+
+    * {
+      color: white;
+    }
+  }*/
+}

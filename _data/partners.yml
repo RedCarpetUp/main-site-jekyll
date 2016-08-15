@@ -1,0 +1,19 @@
+- name: Ssl trans secure
+  logo: ssl_trans_secure.png
+  logo_height: 40
+
+- name: Pbs
+  logo: pbs.png
+  logo_height: 22
+
+- name: Rackspace
+  logo: rackspace.png
+  logo_height: 26
+
+- name: Biz Park
+  logo: biz_park.png
+  logo_height: 26
+
+- name: Mobile Analytics
+  logo: mixpanel.png
+  logo_height: 26

@@ -1,0 +1,11 @@
+- name: trust-pilot
+  image: trust-pilot.png
+
+- name: cba
+  image: cba.png
+
+- name: comodo
+  image: comodo.png
+
+- name: direct-lender
+  image: direct-lender.png

@@ -1,0 +1,184 @@
+---
+layout: default
+title: Home
+alttitle: Buy anything from e-commerce websites in easy installments.
+subtitle: No bank account or credit card required Pay back in easy installments - including cash
+---
+
+<div class="home-content">
+    <div class="container-fluid bg-grad-header-home" id="header-info">
+        <div class="row" id="app-download">
+            <div class="col-xs-12">
+                <div class="text-white text-center header-text">
+                    <h2 class="alpha">Buy anything from e-commerce websites in easy installments.</h2>
+                    <h4>No bank account or credit card required. Pay back in easy installments &mdash; including
+                        cash!</h4>
+                </div>
+
+                <div class="row">
+                    <div class="apps">
+                        <a target="_blank"
+                           href="https://play.google.com/store/apps/details?id=com.redcarpetup.rewardpay">
+                            {% img "googleplay.svg" alt:"Google" %}
+                        </a>
+                        {% img "appstore.svg" alt:"apple" %}
+                    </div>
+                    <!--<div id="shop-svg">
+                        {% img "phone.svg" width:"250" height:"auto" alt:"Money in 15 minutes" %}
+                    </div>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+
+    <section class="bg-white icon-banner">
+        <div class="container">
+            <div class="row text-center">
+                <div>
+                    <h2>What can you do with <strong>RedCarpet</strong>?</h2>
+                    {% for shop in site.data.shop %}
+                    <div class="shops">
+                        {% img "shop/{{ shop.image }}" alt:"{{ shop.name }}" height:"73" width:"auto" %}
+                        <p>{{ shop.name }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light-grey icon-banner">
+        <div class="container">
+            <div class="row text-center support">
+                <h2>We support the following partners and hundreds more!</h2>
+                {% for support in site.data.support %}
+                {% img "support/{{ support.image }}" alt:"{{ support.name }}" height:"73" width:"auto" %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white" id="section-intro">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h2>So how does it work?</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="steps">
+        <div class="container" id="how-to">
+            <div class="content-section-a">
+                <div class="row">
+                    <div class="text-center">
+                        {% img "smartphone.svg" width:"75" height:"auto" alt:"Money in 15 minutes" class:"app" %}
+                        <p><span class="circled-num"><span>1</span></span> Download the app.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section-a">
+                <div class="row">
+                    <div class="text-center">
+                        {% img "files.svg" width:"75" height:"auto" alt:"Document" %}
+                        <p><span class="circled-num"><span>2</span></span> Upload verification documents and get your
+                            credit limit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section-a">
+                <div class="row">
+                    <div class="text-center">
+                        {% img "telemarketer.svg" width:"75" height:"auto" alt:"Document" %}
+                        <p><span class="circled-num"><span>3</span></span> Place your order and receive your contract by
+                            phone.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section-a">
+                <div class="row">
+                    <div class="text-center">
+                        {% img "shipping.svg" width:"75" height:"auto" alt:"Document" %}
+                        <p><span class="circled-num"><span>4</span></span> Receive your order in days.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section-a">
+                <div class="row">
+                    <div class="text-center">
+                        {% img "wallet.svg" width:"75" height:"auto" alt:"Payment" %}
+                        <p><span class="circled-num"><span>5</span></span> Pay monthly using cash or online banking.</p>
+                    </div>
+                </div>
+                <!-- /.container -->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-light-grey" id="safe">
+        <div class="container">
+            <div class="row text-center">
+                <h2>Is it safe?</h2>
+
+                {% for safe in site.data.security %}
+                <div class="col-xs-12 col-md-6 security-col">
+                    <div class="security-box">
+                        <div class="header-title">
+                            <h3 class="eta media -media-align-center">
+                                <div class="security-col media__feature">
+                                    {% img "icon-checkbox-circle.svg" width:"24" height:"24" alt:"Checkbox" %}
+                                </div>
+                                <div class="security-header"> {{ safe.title }}</div>
+                            </h3>
+                        </div>
+                        <div class="text text-left"><p> {{ safe.text }} </p></div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white section-intro-lower">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h2>Students Love RedCarpet</h2>
+                    <p>See some of their stories!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="videos">
+        <div class="container">
+            <div class="row">
+                {% for story in site.data.stories %}
+                <div class="col-xs-6 text-center video-container">
+                    <iframe src="//www.youtube.com/embed/{{ story.video_id }}" frameborder="0" width="560" height="315"
+                            allowfullscreen></iframe>
+                    <!--
+                             <a data-toggle="modal" data-target="#modal" data-title="{{ story.name }}" data-video-id="{{ story.video_id }}">
+                                <image src="http://img.youtube.com/vi/{{ story.video_id }}/0.jpg" class ="image-responsive">
+                              </a>
+                            -->
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+</div>
+</section>
+
+</div>
+
+{% include modal.html %}

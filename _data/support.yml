@@ -1,0 +1,11 @@
+- name: Amazon
+  image: amazon-big-logo.svg
+
+- name: Flipkart
+  image: flipkart-logo-eps-vector-image.png
+
+- name: Paytm
+  image: paytm.svg
+
+- name: snapdeal
+  image: snapdeal.svg

@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+menu: main
+footer: nav
+alttitle: Blog
+subtitle: Ideas from RedCarpet about building credit and inspiring financial know-how.
+---
+<div class="container">
+<section id="section-posts">
+    <ul class="post-list list-unstyled">
+      {% for post in site.posts %}
+        <li>
+          <h3>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h3>
+          <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" class="date-published">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} • by <a class="post-author" href="#">{{ post.author }}</a>{% endif %}{% if !post.categories.blank? %} • in <a href="post-category" href="#">{{ post.categories }}</a>{% endif %}</p>
+
+          {{ post.content | strip_html | truncatewords: 50 }}
+          <br>
+          <a href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+        </li>
+      {% endfor %}
+    </ul>
+</section>
+</div>
+
+<div class="clearfix"></div>

@@ -1,0 +1,180 @@
+---
+layout: default
+title: About
+permalink: /about/
+menu: main
+footer: nav
+subtitle: Our mission is to expand access to credit and lower the cost of borrowing.
+---
+
+<section class="dedication bg-white">
+    <div class="container">
+        <div class="text-center col-xs-10">
+            <h2>100% dedicated to our customers.</h2>
+            <p>Very simple - RedCarpet lends to customers in India to finance their online purchases - e-commerce,
+                travel, etc. In India, credit and finance companies are able to service less than 3% of the customer
+                base because there is no data, no widespread credit bureaus to profile and score customers. RedCarpet
+                has access to much more data, including data on your mobile phone. We use this data to service customers
+                who never had any access to credit before.
+            </p>
+            <p>We NEVER give out cash - we complete the purchase for you on other e-commerce sites. So our lending is
+                very closely tied to shopping (rather than pay for your school fees, etc.).
+                Remember in India, there are no credit bureaus... no real way of figuring out risk of people. So our
+                secret sauce is this data science that figures out people's risk.</p>
+            <p><strong>Successful borrowers see their rates go down over time.</strong></p>
+        </div>
+    </div>
+
+</section>
+
+<section class="team">
+    <header class="text-center">
+        <h2>Team</h2>
+    </header>
+
+    <div class="container members">
+        <div class="row">
+            {% for member in site.data.members %}
+            <div class="teammate">
+                {% img "members/{{ member.avatar }}" alt:"{{ member.name }}" class:"img-responsive" %}
+                <div class="overlay">
+                    <span>{{member.name}}</span>
+                    {% if member.brief == "" or member.brief == nil %}
+                    {% else %}
+                        <a class="info" href="{{site.baseurl}}/{{ member.name | datapage_url: 'people' }}">View Bio</a>
+                    {% endif %}
+                    <ul>
+                        {% if member.twitter == "" or member.twitter == nil %}
+                        {% else %}
+                        <li><a href="https://twitter.com/{{member.twitter}}">{% img "icon-twitter-white.svg" width:"16" height:"16" alt:"Twitter" %}</a></li>
+                        {% endif %}
+
+                        {% if member.github == "" or member.github == nil %}
+                        {% else %}
+                        <li><a href="https://github.com/{{member.github}}">{% img "icon-github.svg" width:"16" height:"16" alt:"Github" %}</a></li>
+                        {% endif %}
+
+                        {% if member.linkedin == "" or member.linkedin == nil %}
+                        {% else %}
+                        <li><a href="https://linkedin.com/in/{{member.linkedin}}">{% img "icon-linkedin.svg" width:"16" height:"16" alt:"LinkedIn" %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="row text-center">
+            <section class="bg-white" id="partners">
+                <header>
+                    <h2>Angel Investors</h2>
+                </header>
+                <div class="container">
+                    <div class="row text-center">
+                        {% for angel in site.data.angels %}
+                        <div class="angels">
+                            {% img "angels/{{ angel.avatar }}" alt:"{{ angel.name }}" width:"auto" %}
+                            <p ><strong>{{ angel.name }}</strong></p>
+                            <p>{{ angel.job }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="row text-center">
+            <section class="bg-white" id="particons">
+                <header>
+                    <h2>Venture Capital</h2>
+                </header>
+                <div class="container">
+                    <div class="row text-center">
+                        {% for icon in site.data.particons %}
+                        <div class="partners-logos">
+                            {% img "particons/{{ icon.image }}" alt:"{{ icon.name }}" height:"40" width:"auto" %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!--
+    <ul>
+    {% for person in site.data.members %}
+      <li><a href="{{ person.name | datapage_url: 'people' }}">{{person.name}}</a></li>
+    {% endfor %}
+    </ul>
+    -->
+
+    <!--
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h2>Quality credit <br class="hidden-phone"> creates opportunities.</h2>
+            <p>We’re focused on providing quality choices to people who aren’t accustomed to having them. Our products reflect four ideals:</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-5 col-sm-offset-6 span-padded bg-green first">
+            <div class="lockup-icon-left">
+              <h4 class="small pull-left text-uppder">01</h4>
+              <div class="text">
+                <h2 class="em compressed">Ladders</h2>
+                <p>We strive to provide an actionable path for customers to move up and earn access to more money at a lower cost.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 span-padded bg-primary">
+            <div class="lockup-icon-left">
+              <h4 class="small pull-left text-uppder">02</h4>
+              <div class="text">
+                <h2 class="em compressed">Not chutes</h2>
+                <p>Our business model is based on customers succeeding (paying back their loans on time and paying off their credit card balances). When they need more time, we collaborate with them to find a solution that works. No rollovers, no debt traps. Ever.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-7 col-sm-offset-5 span-padded bg-blue">
+            <div class="lockup-icon-left">
+              <h4 class="small pull-left text-uppder">03</h4>
+              <div class="text">
+                <h2 class="em compressed">Transparency</h2>
+                <p>We strive to make our products as easy to understand as possible. The first step in applying for a loan is setting the terms you want. We tell you the cost and APR before you share any information.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-1 span-padded bg-orange">
+            <div class="lockup-icon-left">
+              <h4 class="small pull-left text-uppder">04</h4>
+              <div class="text">
+                <h2 class="em compressed">Building credit matters</h2>
+                <p>While we don’t require good credit, our products encourage and reward actions that result in higher credit scores. Higher scores lead to more choices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="lockup-centered lockup-inset-block text-center">
+              <p><strong>You can read more about <a href="#">our take on payday lending</a>.</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    -->

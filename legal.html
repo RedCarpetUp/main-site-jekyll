@@ -1,0 +1,44 @@
+---
+layout: default
+title: Legal
+permalink: /legal/
+footer: nav
+menu: main
+---
+
+<div class="container-fluid">
+  <!--<div class="col-md-8 col-md-offset-2" >
+    <ul class="list-unstyled list-inline text-center">
+      <div class="row">
+        <li class="text-center col-xs-4 col-xs-offset-2">
+          <a href="#toc"> {% img "scroll-with-text.svg" width:"40" height:"40" alt:"scroll" %}</a> <br>
+          <span class="strong">Terms and Conditions</span>
+        </li>
+        <li class="text-center col-xs-4">
+          <a href="#privacy" > 
+            {% img "security-badge.svg" width:"40" height:"40" alt:"security" %}
+          </a> <br>
+          <span class="strong">Privacy Policy</span>
+        </li>
+      </div>
+    </ul>
+  </div>-->
+
+  <div class="col-md-8 col-md-offset-2">
+    <div >
+     <!-- Tab content -->
+      <div id="toc">
+        {% markdown terms_and_conditions.md %}
+      </div>
+      <!-- // Tab content END -->
+      <!-- Tab content -->
+      <div id="privacy">
+            {% markdown privacy.md %}
+    
+      </div>
+      <!-- // Tab content END -->
+    </div>
+  </div>
+</div>
+
+ 

@@ -1,0 +1,135 @@
+.text-ladder-green {
+  .number, &:hover, &.active {
+    color: #98D571;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #98D571;
+  }
+}
+
+.text-merit-red {
+  .number, &:hover, &.active {
+    color: #E58477;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #E58477;
+  }
+}
+
+.text-bozo-blue {
+  .number, &:hover, &.active {
+    color: #9DA9BC;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #9DA9BC;
+  }
+}
+
+.text-broken-blue {
+  .number, &:hover, &.active {
+    color: #75A8F2;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #75A8F2;
+  }
+}
+
+.text-learn-yellow {
+  .number, &:hover, &.active {
+    color: #FFD85A;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #FFD85A;
+  }
+}
+
+.text-owner-orange {
+  .number, &:hover, &.active {
+    color: #e58a40;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #e58a40;
+  }
+}
+
+.careers {
+  ul li {
+    margin-bottom: 8px;
+  }
+
+  .careers-heading {
+    background-image: asset_url("culture.jpg");
+    padding: 125px 0 75px;
+  }
+
+  #story {
+    h1, h2, h3, h4, h5 {
+      text-align: center;
+    }
+  }
+
+  .redcarpet-life {
+    background-image: asset_url("life.jpg");
+  }
+
+  .day-life {
+    padding: 40px;
+  }
+
+  .gradient-border {
+    background-color: #e3eddd;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(45deg, #e1e8f2, #e3eddd);
+    background-image: -webkit-linear-gradient(45deg, #e1e8f2, #e3eddd);
+    background-image: -o-linear-gradient(45deg, #e1e8f2, #e3eddd);
+    background-image: linear-gradient(45deg, #e1e8f2, #e3eddd);
+  }
+
+  .careers-values {
+    li {
+      color: #666;
+
+      .number {
+        font-family: adelle, "Adelle Basic", Georgia, Times, serif;
+        font-style: italic;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  #perks {
+    background-color: #EFF2F7;
+  }
+
+  .redcarpet-culture {
+    background-image: asset_url("culture.jpg");
+  }
+
+  #backers {
+    display: none;
+  }
+
+  .backer {
+    padding: 20px 0;
+
+    img {
+      max-width: 160px;
+    }
+  }
+
+  #hiring-again {
+    padding: 0;
+
+    .container {
+      background-image: asset_url('map.jpg');
+      background-position: top right;
+      padding: 50px 0;
+    }
+  }
+}

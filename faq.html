@@ -1,0 +1,34 @@
+---
+layout: default
+title: FAQs
+permalink: /faq/
+menu: main
+footer: nav
+alttitle: Frequently Asked Questions
+subtitle: Have a question? We have answers!
+---
+
+<section class="faq-page">
+  <div class="container">
+
+    <div class="warning-box">
+      <strong class="warning">Notice:</strong> We have recently been notified that someone is misusing our name and pretending to be RedCarpet. <strong>If you are contacted by a person that asks for money to complete a loan transaction and claims to be from RedCarpet, it is a scam.</strong> RedCarpet does not ask for money in order to complete loan applications. RedCarpet does not require you to send money in order to obtain a loan. If you are are contacted by anyone representing to be RedCarpet and you are unsure whether it is RedCarpet, please do not provide any information or money. Phone us back directly at 911244050337 or email us at support@redcarpetup.com.
+    </div>
+
+    <ul id="faq-list" class="list-unstyled" role="tablist" aria-multiselectable="true">
+      {% for faq in site.data.faqs %}
+        {% assign index = forloop.index %}
+        <li class="faq">
+          <a role="button" data-toggle="collapse" data-parent="#faq-list" href="#faq-{{ index }}" aria-expanded="false" aria-controls="faq-{{ index }}">
+            {{ faq.question }}
+          </a>
+          <div id="faq-{{ index }}" class="faq-collapse collapse" role="tabpanel" aria-labelledby="faq-{{ index }}">
+            {{ faq.answer }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p>If you have a question that is not on here and you think it should be, please submit it to <a href="#">support@redcarpetup.com</a></p>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
+<!--[if IE 7 ]> <html class="no-js ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 8 ]> <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+
+  {% include head.html %}
+
+  <body class="{% if page.title %}{{ page.title | downcase | replace: ' ', '-' }}{% else %}{{ site.title | downcase | replace: ' ', '_' }}{% endif %}">
+
+  {% include header.html %}
+    {% unless page.title == "Home" or page.layout == 'post' %}
+      {% include body_header.html %}
+    {% endunless %}
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+  {% javascript ie10-viewport-bug-workaround %}
+</html>

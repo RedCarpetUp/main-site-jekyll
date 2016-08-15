@@ -1,0 +1,11 @@
+- name: Apply in as few as 5 minutes
+  image: stopwatch.svg
+
+- name: Instant decision
+  image: thumbs-up.svg
+
+- name: Good credit not required
+  image: bad-cred.svg
+
+- name: Trusted direct lender
+  image: direct-lender.svg
