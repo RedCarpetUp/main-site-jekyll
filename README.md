@@ -21,7 +21,7 @@ Visit following address with any of your web browsers;
 
 To deploy to amazon s3 and cloudfront (hooray! no webhosting needed)
 
-    s3_id=AKI s3_secret=4QN s3_website push 
+    s3_id=AKI s3_secret=4QN bundle exec s3_website push   
 
 A live site is at [beta.redcarpetup.com](https://beta.redcarpetup.com)
 
